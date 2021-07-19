@@ -30,25 +30,33 @@ namespace TriangulationOnConicalSurfaceApp
             points = new Vector3D[numberOfSegments];
             for (int i = 0; i < numberOfSegments; i++)
             {
-                points[i] = new Vector3D(radius * Math.Cos(2 * Math.PI * i / numberOfSegments), 0,
-                    radius * Math.Sin(2 * Math.PI * i / numberOfSegments));
+                points[i] = new Vector3D(radius * Math.Cos(2 * Math.PI * i / numberOfSegments),
+                    radius * Math.Sin(2 * Math.PI * i / numberOfSegments), 0);
             }
             return points;
         }
 
         public Vector3D[] getSurfaceNormals()
         {
-            // y-координата векторов всегда одинакова и зависит от соотношения радиуса и высоты конуса
+            if(points == null)
+            {
+                return new Vector3D[0] { };
+            } else if(points.Length < 1)
+            {
+                return new Vector3D[0] { };
+            }
+
+            // z-координата векторов всегда одинакова и зависит от соотношения радиуса и высоты конуса
             double hypotenuse = Math.Sqrt(radius * radius + height * height);
-            double Y = radius / hypotenuse;
+            double Z = radius / hypotenuse;
             normals = new Vector3D[points.Length];
             int numberOfSegments = points.Length;
 
-            // x- и z-координаты зависят от конкретной точки
+            // x- и y-координаты зависят от конкретной точки
             for(int i = 0; i < numberOfSegments; i++)
             {
-                normals[i] = new Vector3D(height * Math.Cos(2 * Math.PI * i / numberOfSegments) / hypotenuse, Y,
-                    height * Math.Sin(2 * Math.PI * i / numberOfSegments) / hypotenuse);
+                normals[i] = new Vector3D(height * Math.Cos(2 * Math.PI * i / numberOfSegments) / hypotenuse,
+                    height * Math.Sin(2 * Math.PI * i / numberOfSegments) / hypotenuse, Z);
             }
             return normals;
         }

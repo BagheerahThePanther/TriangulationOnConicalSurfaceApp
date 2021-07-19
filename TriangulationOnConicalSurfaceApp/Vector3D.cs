@@ -130,7 +130,7 @@ namespace TriangulationOnConicalSurfaceApp
 
         public virtual string toString()
         {
-            return "(" + x.ToString("0.0") + "; " + y.ToString("0.0") + "; " + z.ToString("0.0") + ")";
+            return "(" + x.ToString("0.000") + "; " + y.ToString("0.000") + "; " + z.ToString("0.000") + ")";
         }
     }
 }

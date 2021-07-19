@@ -29,34 +29,34 @@ namespace TriangulationOnConicalSurfaceApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownHeight = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonCalculatePoints = new System.Windows.Forms.Button();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownRadius = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSegmentsNum = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCalculateSurfaceNormals = new System.Windows.Forms.Button();
             this.textBoxPoints = new System.Windows.Forms.TextBox();
             this.textBoxNormals = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRadius)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSegmentsNum)).BeginInit();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // numericUpDownHeight
             // 
-            this.numericUpDown1.DecimalPlaces = 1;
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 25);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numericUpDownHeight.DecimalPlaces = 1;
+            this.numericUpDownHeight.Location = new System.Drawing.Point(12, 25);
+            this.numericUpDownHeight.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(167, 20);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDownHeight.Name = "numericUpDownHeight";
+            this.numericUpDownHeight.Size = new System.Drawing.Size(167, 20);
+            this.numericUpDownHeight.TabIndex = 0;
+            this.numericUpDownHeight.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -81,36 +81,36 @@ namespace TriangulationOnConicalSurfaceApp
             this.buttonCalculatePoints.UseVisualStyleBackColor = true;
             this.buttonCalculatePoints.Click += new System.EventHandler(this.buttonCalculatePoints_Click);
             // 
-            // numericUpDown2
+            // numericUpDownRadius
             // 
-            this.numericUpDown2.DecimalPlaces = 1;
-            this.numericUpDown2.Location = new System.Drawing.Point(185, 25);
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.numericUpDownRadius.DecimalPlaces = 1;
+            this.numericUpDownRadius.Location = new System.Drawing.Point(185, 25);
+            this.numericUpDownRadius.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(167, 20);
-            this.numericUpDown2.TabIndex = 3;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numericUpDownRadius.Name = "numericUpDownRadius";
+            this.numericUpDownRadius.Size = new System.Drawing.Size(167, 20);
+            this.numericUpDownRadius.TabIndex = 3;
+            this.numericUpDownRadius.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // numericUpDown3
+            // numericUpDownSegmentsNum
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(358, 25);
-            this.numericUpDown3.Minimum = new decimal(new int[] {
+            this.numericUpDownSegmentsNum.Location = new System.Drawing.Point(358, 25);
+            this.numericUpDownSegmentsNum.Minimum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(167, 20);
-            this.numericUpDown3.TabIndex = 4;
-            this.numericUpDown3.Value = new decimal(new int[] {
+            this.numericUpDownSegmentsNum.Name = "numericUpDownSegmentsNum";
+            this.numericUpDownSegmentsNum.Size = new System.Drawing.Size(167, 20);
+            this.numericUpDownSegmentsNum.TabIndex = 4;
+            this.numericUpDownSegmentsNum.Value = new decimal(new int[] {
             3,
             0,
             0,
@@ -143,6 +143,7 @@ namespace TriangulationOnConicalSurfaceApp
             this.buttonCalculateSurfaceNormals.TabIndex = 7;
             this.buttonCalculateSurfaceNormals.Text = "Рассчитать векторы нормали";
             this.buttonCalculateSurfaceNormals.UseVisualStyleBackColor = true;
+            this.buttonCalculateSurfaceNormals.Click += new System.EventHandler(this.buttonCalculateSurfaceNormals_Click);
             // 
             // textBoxPoints
             // 
@@ -172,16 +173,16 @@ namespace TriangulationOnConicalSurfaceApp
             this.Controls.Add(this.buttonCalculateSurfaceNormals);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDownSegmentsNum);
+            this.Controls.Add(this.numericUpDownRadius);
             this.Controls.Add(this.buttonCalculatePoints);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownHeight);
             this.Name = "MainForm";
             this.Text = "Triangulation on a conical surface";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRadius)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSegmentsNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,11 +190,11 @@ namespace TriangulationOnConicalSurfaceApp
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownHeight;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonCalculatePoints;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDownRadius;
+        private System.Windows.Forms.NumericUpDown numericUpDownSegmentsNum;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCalculateSurfaceNormals;
