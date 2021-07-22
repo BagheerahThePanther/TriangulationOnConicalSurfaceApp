@@ -75,7 +75,7 @@ namespace TriangulationOnConicalSurfaceApp
             // 
             this.buttonCalculatePoints.Location = new System.Drawing.Point(531, 22);
             this.buttonCalculatePoints.Name = "buttonCalculatePoints";
-            this.buttonCalculatePoints.Size = new System.Drawing.Size(146, 23);
+            this.buttonCalculatePoints.Size = new System.Drawing.Size(224, 23);
             this.buttonCalculatePoints.TabIndex = 2;
             this.buttonCalculatePoints.Text = "Рассчитать точки";
             this.buttonCalculatePoints.UseVisualStyleBackColor = true;
@@ -137,9 +137,9 @@ namespace TriangulationOnConicalSurfaceApp
             // buttonCalculateSurfaceNormals
             // 
             this.buttonCalculateSurfaceNormals.Enabled = false;
-            this.buttonCalculateSurfaceNormals.Location = new System.Drawing.Point(683, 22);
+            this.buttonCalculateSurfaceNormals.Location = new System.Drawing.Point(761, 22);
             this.buttonCalculateSurfaceNormals.Name = "buttonCalculateSurfaceNormals";
-            this.buttonCalculateSurfaceNormals.Size = new System.Drawing.Size(184, 23);
+            this.buttonCalculateSurfaceNormals.Size = new System.Drawing.Size(240, 23);
             this.buttonCalculateSurfaceNormals.TabIndex = 7;
             this.buttonCalculateSurfaceNormals.Text = "Рассчитать векторы нормали";
             this.buttonCalculateSurfaceNormals.UseVisualStyleBackColor = true;
@@ -151,12 +151,12 @@ namespace TriangulationOnConicalSurfaceApp
             this.textBoxPoints.Multiline = true;
             this.textBoxPoints.Name = "textBoxPoints";
             this.textBoxPoints.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxPoints.Size = new System.Drawing.Size(418, 448);
+            this.textBoxPoints.Size = new System.Drawing.Size(552, 448);
             this.textBoxPoints.TabIndex = 8;
             // 
             // textBoxNormals
             // 
-            this.textBoxNormals.Location = new System.Drawing.Point(442, 57);
+            this.textBoxNormals.Location = new System.Drawing.Point(576, 57);
             this.textBoxNormals.Multiline = true;
             this.textBoxNormals.Name = "textBoxNormals";
             this.textBoxNormals.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -167,7 +167,7 @@ namespace TriangulationOnConicalSurfaceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 517);
+            this.ClientSize = new System.Drawing.Size(1013, 517);
             this.Controls.Add(this.textBoxNormals);
             this.Controls.Add(this.textBoxPoints);
             this.Controls.Add(this.buttonCalculateSurfaceNormals);

@@ -31,11 +31,13 @@ namespace TriangulationOnConicalSurfaceApp
                 return "";
             }
             Vector3D[] points = surface.getPointsOfSegments(numberOfSegments);
+            Vector3D topPoint = new Vector3D(0, 0, surface.Height);
             string result = getDescription(numberOfSegments); 
 
             for(int i = 0; i < numberOfSegments; i++)
             {
-                result += "Точка " + i + " имеет координаты " + points[i].toString() + Environment.NewLine;
+                result += "Треугольник " + i + " состоит из точек: " + points[i].toString() + " " + topPoint.toString() +
+                    " " + points[(i+1) % numberOfSegments].toString() + Environment.NewLine;
             }
             return result;
         }
